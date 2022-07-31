@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Project dependencies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- nodejs
+- mongodb
+- npm / yarn
 
-## Available Scripts
 
-In the project directory, you can run:
+# install projects
 
-### `npm start`
+clone API and front project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+install node modules in `front` and `API`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+yarn install
+```
 
-### `npm test`
+# run react
+```
+yarn start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# start API
 
-### `npm run build`
+You will need mongodb service start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+yarn dev
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Subjects :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Now you are ready to start.
+Please read all the subject before start it's important :)
 
-### `npm run eject`
+## usecase 1
+we need to improve chef interface
+- add an image on chef profile (API + react) 
+(you can just add an url to the image think to add a default image)
+- add suppression of chef (API + react)
+- add edit chef feature (API + react)
+- sort chef list by firstname then name
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## usecase 2
+we need to add a menu page
+- create a route name menus
+- add a form for a menu :
+  - a menu have a name, a starter, a plate, and a dessert.
+  - select a chef to associate to the menu (API + react)
+  - submit need to save menu in mongodb (API + react)
+- list menus sort by name (API + react)
+  (list need be a card of menu displaying all menu informations)
+- add suppression of a menu (API + react)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can choose one usecase no need to do both. (one subject is probably already long enought)
+If you want to do all of them, as you want :)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Any question ? contact us.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Have fun !
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+if you dont have enought you can add an image by menu and add menu edition feature
