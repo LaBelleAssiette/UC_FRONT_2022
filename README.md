@@ -1,29 +1,30 @@
 # Project dependencies
 
-- nodejs
-- mongodb
-- npm / yarn
+- `nodejs`
+- `mongodb`
+- `npm` / `yarn`
 
 
-# install projects
+# Install projects
 
-clone API and front project
+Clone API and front project
 
-install node modules in `front` and `API`
+Install node modules in `front` and `API`
 
 ```bash
 yarn install
 ```
 
-# run react
+# Run react
+In your `front` repository run :
 ```
 yarn start
 ```
 
-# start API
+# Start API
+You will need mongodb service start.
 
-You will need mongodb service start
-
+Then In your `API` repository run :
 ```
 yarn dev
 ```
@@ -31,32 +32,35 @@ yarn dev
 # Subjects :
 
 Now you are ready to start.
-Please read all the subject before start it's important :)
 
-## usecase 1
-we need to improve chef interface
-- add an image on chef profile (API + react) 
+Please read all the subjects before starting.
+
+You can choose one use case, no need to do both.
+(one subject is probably already long enough)
+
+If you want to do all of them, as you want :)
+
+## Use case 1
+
+We need to improve chef interface
+- add an image on the chef profile page (API + react)
 (you can just add an url to the image think to add a default image)
 - add suppression of chef (API + react)
 - add edit chef feature (API + react)
-- sort chef list by firstname then name
+- sort chef list by `firstname` then `name`
 
-## usecase 2
-we need to add a menu page
-- create a route name menus
-- add a form for a menu :
-  - a menu have a name, a starter, a plate, and a dessert.
-  - select a chef to associate to the menu (API + react)
+## Use case 2
+We need to add a menu page
+- Create a route named “Menus”
+- Add page with a form for add menu :
+  - a menu has a name, a starter, a plate, and a dessert.
+  - add a select to associate a chef to the menu (API + react)
   - submit need to save menu in mongodb (API + react)
-- list menus sort by name (API + react)
-  (list need be a card of menu displaying all menu informations)
+- display a list of menus sort by name (API + react)
+(list needs be a card of menu displaying all menu information)
 - add suppression of a menu (API + react)
-
-You can choose one usecase no need to do both. (one subject is probably already long enought)
-If you want to do all of them, as you want :)
-
-Any question ? contact us.
 
 Have fun !
 
-if you dont have enought you can add an image by menu and add menu edition feature
+If you don't have enough, you can add an image by menu and add menu edition feature
+
