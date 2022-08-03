@@ -67,6 +67,8 @@ function ChefsPage() {
         }, resolveChefAdd.bind({setChefs, chefs}), rejectChefAdd)
     }
 
+
+
     return (<div>
         <ChefCardList chefs={chefs}/>
         { error && (<div>Erreur : {error.message}</div>) }

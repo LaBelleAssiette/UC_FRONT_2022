@@ -8,19 +8,20 @@ import { deleteChef, updateChef } from"../../../services/chefsService";
  * @param {string} chef.firstname
  * @param {string} chef.lastname
  * @param {string} chef.description
+ * @param {string} chef.photo
  * @returns {JSX.Element}
  * @constructor
  */
 function ChefCard({chef}) {
 
         // ontrie les chefs en focntin de leur nom
-        
+
 
 
     return (<article className="card">
         <header>{chef.firstname} {chef.lastname}</header>
         <div className='card__container--image'>
-            <img src={chef.Photo} alt={chef.firstname}/>
+            <img src={chef.photo} alt={chef.firstname}/>
             <div>{chef.description}</div>
         </div>
 
