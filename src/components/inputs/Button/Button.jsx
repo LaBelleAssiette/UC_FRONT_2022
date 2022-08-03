@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
  * @constructor
  */
 function Button({onClick, children}) {
-    return (<button class="primary-button" onClick={onClick}>{children}</button>);
+    return (<button className="primary-button" onClick={onClick}>{children}</button>);
 }
 
 Button.propTypes = {
