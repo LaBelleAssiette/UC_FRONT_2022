@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Text from "../components/inputs/Text/Text";
 import Textarea from "../components/inputs/Textarea/Textarea";
 import Button from "../components/inputs/Button/Button";
+import Photo from "../components/inputs/Photo/photo";
 import ChefCardList from "../components/lists/ChefCardList/ChefCardList";
 import {addChef, getChefs} from "../services/chefsService";
 
@@ -16,10 +17,12 @@ function ChefsPage() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
+
     /**********************************
      * Promise callback for chefslist
      **********************************/
     function resolveChefsList(result) {
+        console.log(result);
         setIsLoaded(true);
         setChefs(result);
     }
@@ -39,9 +42,11 @@ function ChefsPage() {
     }
 
     useEffect(() => {
-        getChefs(resolveChefsList.bind({setIsLoaded, setChefs}), rejectChefsList.bind({setIsLoaded, setError}))
+        getChefs(
+            resolveChefsList.bind({setIsLoaded, setChefs}), 
+            rejectChefsList.bind({setIsLoaded, setError}))  
     }, [])
-
+    console.log(chefs)
     function toggleForm() {
         setIsHideForm(!isHideForm);
     }
@@ -57,6 +62,8 @@ function ChefsPage() {
             firstname: form.elements["firstname"].value,
             lastname: form.elements["lastname"].value,
             description: form.elements["description"].value,
+            Photo: form.elements["photo"].value
+            
         }, resolveChefAdd.bind({setChefs, chefs}), rejectChefAdd)
     }
 
@@ -66,9 +73,10 @@ function ChefsPage() {
         { !isLoaded && (<div>Chargement...</div>) }
         <Button onClick={() => toggleForm()}>+ New chef</Button>
         <form className={`card chef-form${isHideForm ? ' hidden' : ''}`}>
-            <Text name={'firstname'} label={'Firstname'} placeholder={"Chef Firstname"} value={''} />
+            <Text name={'firstname'} label={'Firstname'} placeholder={"Chef Firstname"} value={''}  />
             <Text name={'lastname'} label={'Lastname'} placeholder={"Chef Lastname"} value={''} />
             <Textarea name={'description'} label={'Chef description'} placeholder={'Introduce chef in few words'} value={''} />
+            <Photo  name={'photo'} label={'Chef photo'} placeholder={'Photo URL'} value={''} />
             <Button onClick={submit}>Add chef</Button>
         </form>
     </div>);

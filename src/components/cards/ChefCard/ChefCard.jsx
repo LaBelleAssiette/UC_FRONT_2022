@@ -1,5 +1,6 @@
 import React, {} from 'react';
 import PropTypes from "prop-types";
+import { deleteChef, updateChef } from"../../../services/chefsService";
 
 /**
  * chef card component
@@ -11,9 +12,22 @@ import PropTypes from "prop-types";
  * @constructor
  */
 function ChefCard({chef}) {
+
+        // ontrie les chefs en focntin de leur nom
+        
+
+
     return (<article className="card">
         <header>{chef.firstname} {chef.lastname}</header>
-        <div>{chef.description}</div>
+        <div className='card__container--image'>
+            <img src={chef.Photo} alt={chef.firstname}/>
+            <div>{chef.description}</div>
+        </div>
+
+        <button onClick={deleteChef}>Supprimer</button>
+        <button onClick={updateChef}>Modifier</button>
+
+        
     </article>);
 }
 
