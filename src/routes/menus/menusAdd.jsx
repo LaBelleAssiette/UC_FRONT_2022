@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {getChefs} from "../../services/chefsService";
 import {addMenu} from "../../services/menusService";
 
-export default function MenusAdd() {
+export default function MenusAdd({updateList}) {
     const [dialogOpened, setDialogOpened] = useState(false);
     const [chefs, setChefs] = useState([]);
 
@@ -32,6 +32,8 @@ export default function MenusAdd() {
             menu[key] = value;
         });
         await addMenu(menu);
+        updateList();
+        closeDialog();
     }
 
     return (

@@ -1,20 +1,8 @@
-import {useEffect, useState} from "react";
-import {getMenus} from "../../services/menusService";
-
-export default function MenusList() {
-    const [menus, setMenus] = useState([]);
-
-    useEffect(() => {
-        (async () => {
-            const menus = await getMenus();
-            setMenus(menus);
-        })();
-    },[]);
-
+export default function MenusList({menus}) {
     return (
-        <section>
+        <section className="card-list">
             {menus.map((menu, key) => (
-                <article key={key}>
+                <article key={key} className='card'>
                     <header>
                         <h1>{menu.title}</h1>
                     </header>
