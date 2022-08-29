@@ -12,7 +12,7 @@ export default function MenusList({menus}) {
                         <li>Dessert: {menu.dessert}</li>
                     </ul>
                     <footer>
-                        <small>{menu.author}</small>
+                        <small>{menu.chef} (displayed as id but you got the idea 😅)</small>
                     </footer>
                 </article>
             ))}
