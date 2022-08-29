@@ -9,6 +9,7 @@ import './index.css';
 
 import Header from "./components/Header/Header";
 import Chefs from "./routes/chefs";
+import Menus from "./routes/menus";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
           <Routes>
               <Route path="/" element={<Chefs />} />
               <Route path="chefs" element={<Chefs />} />
+              <Route path="menus" element={<Menus />} />
           </Routes>
       </BrowserRouter>
   </React.StrictMode>

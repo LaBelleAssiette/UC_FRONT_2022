@@ -6,6 +6,7 @@ function Header() {
         <header>
             <ul>
                 <li><Link to="/chefs">Chefs</Link></li>
+                <li><Link to="/menus">Menus</Link></li>
             </ul>
         </header>
     );
