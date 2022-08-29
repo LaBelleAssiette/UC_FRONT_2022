@@ -22,4 +22,38 @@ function addChef(chef, resolve, reject){
         .then(resolve, reject);
 }
 
-export { getChefs, addChef };
+// I could have copied the way it was written, but I wanted to do it my own way
+async function removeChef(chefId){
+    const apiUrl = 'http://localhost:2001/chefs/' + chefId;
+    const requestMetadata = {
+        method: 'DELETE'
+    };
+    try {
+        const res = await fetch(apiUrl, requestMetadata);
+        return await res.json();
+    } catch (e) {
+        console.error(e);
+    }
+
+}
+
+async function updateChef(chief){
+    const apiUrl = 'http://localhost:2001/chefs/' + chief.id;
+    const requestMetadata = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(chief)
+    };
+    console.log('test')
+    try {
+        const res = await fetch(apiUrl, requestMetadata);
+        return await res.json();
+    } catch (e) {
+        console.error(e);
+    }
+
+}
+
+export { getChefs, addChef, removeChef, updateChef };

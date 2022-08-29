@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 
 /**
@@ -12,6 +12,10 @@ import PropTypes from 'prop-types';
  */
 function Text({name, label, placeholder, value}) {
     const [inputValue, setInputValue] = useState(value);
+
+    useEffect(() => {
+        setInputValue(value);
+    }, [value]);
 
     return (<div>
             <label>{label}</label>

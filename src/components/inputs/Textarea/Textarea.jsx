@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 /**
@@ -12,6 +12,11 @@ import PropTypes from 'prop-types';
  */
 function Textarea({name, label, placeholder, value}) {
     const [inputValue, setInputValue] = useState(value);
+
+    useEffect(() => {
+        setInputValue(value);
+    }, [value]);
+
 
     return (<div>
             <label>{label}</label>

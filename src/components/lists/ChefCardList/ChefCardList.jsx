@@ -5,12 +5,15 @@ import PropTypes from "prop-types";
 /**
  * chef card list component
  * @param {Array<chef>} chefs
+ * @param {function} deleteChief
  * @returns {JSX.Element}
  * @constructor
  */
-function ChefCardList({chefs}) {
+function ChefCardList({chefs, deleteChef, editChef}) {
     return (<section className="card-list">
-        {chefs.map((chef, key) => (<ChefCard chef={chef} key={key}/>))}
+        {chefs.map((chef, key) => (
+            <ChefCard chef={chef} key={key} deleteChef={deleteChef} editChef={editChef}/>
+        ))}
     </section>);
 }
 
